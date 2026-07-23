@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="ko"><head>
+<html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>김한얼 | AI Product Manager Portfolio</title>
-<meta content="가상의 AI Product Manager 김한얼의 Pinterest 스타일 포트폴리오입니다." name="description"/>
+<title>Alex Kim | Senior Product Manager Portfolio</title>
+<meta content="Portfolio of Alex Kim, a Senior Product Manager specializing in B2B SaaS scaling, product strategy, and user-centric innovation." name="description"/>
 <!-- Fonts and Icons -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Hanken+Grotesk:wght@600;700;800&amp;family=Geist:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -19,367 +20,471 @@
         theme: {
           extend: {
             "colors": {
-                    "primary": "#E60023", /* Pinterest Red */
+                    "on-secondary-fixed": "#0d1c2f",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#6ffbbe",
+                    "primary-fixed": "#dae2fd",
+                    "surface-tint": "#565e74",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-container-highest": "#e0e3e5",
                     "on-primary": "#ffffff",
-                    "surface": "#ffffff",
-                    "background": "#ffffff",
-                    "on-surface": "#111111",
-                    "secondary": "#767676",
-                    "outline-variant": "#efefef",
-                    "surface-container": "#f0f0f0"
+                    "outline-variant": "#c6c6cd",
+                    "primary-container": "#131b2e",
+                    "secondary-fixed": "#d5e3fd",
+                    "on-surface": "#191c1e",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#f7f9fb",
+                    "primary": "#000000",
+                    "secondary": "#515f74",
+                    "secondary-container": "#d5e3fd",
+                    "tertiary-container": "#002113",
+                    "surface-container": "#eceef0",
+                    "tertiary": "#000000",
+                    "inverse-surface": "#2d3133",
+                    "on-background": "#191c1e",
+                    "surface-dim": "#d8dadc",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#bec6e0",
+                    "outline": "#76777d",
+                    "primary-fixed-dim": "#bec6e0",
+                    "surface-container-low": "#f2f4f6",
+                    "on-primary-container": "#7c839b",
+                    "on-secondary-fixed-variant": "#3a485c",
+                    "surface": "#f7f9fb",
+                    "on-tertiary-container": "#009668",
+                    "on-surface-variant": "#45464d",
+                    "surface-variant": "#e0e3e5",
+                    "tertiary-fixed-dim": "#4edea3",
+                    "on-tertiary-fixed": "#002113",
+                    "on-primary-fixed": "#131b2e",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#b9c7e0",
+                    "on-secondary-container": "#57657b",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f7f9fb",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#005236",
+                    "on-primary-fixed-variant": "#3f465c"
             },
             "borderRadius": {
-                    "DEFAULT": "16px",
-                    "lg": "24px",
-                    "xl": "32px",
-                    "full": "9999px"
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
             },
             "spacing": {
-                    "section-gap": "48px",
-                    "margin-mobile": "12px",
-                    "gutter": "16px",
-                    "container-max": "1440px"
+                    "section-gap": "120px",
+                    "margin-mobile": "20px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "container-max": "1200px"
             },
             "fontFamily": {
                     "body-lg": ["Inter"],
+                    "metric-display": ["Geist"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
                     "headline-xl": ["Hanken Grotesk"],
                     "headline-lg": ["Hanken Grotesk"],
-                    "body-md": ["Inter"]
+                    "label-caps": ["Geist"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "metric-display": ["40px", {"lineHeight": "40px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
             }
           },
         },
       }
     </script>
 <style>
-        .masonry-grid {
-            column-count: 1;
-            column-gap: 16px;
+        .geometric-bg {
+            background-color: #f7f9fb;
+            background-image: radial-gradient(#000000 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.4;
         }
-        @media (min-width: 640px) { .masonry-grid { column-count: 2; } }
-        @media (min-width: 1024px) { .masonry-grid { column-count: 4; } }
-        @media (min-width: 1280px) { .masonry-grid { column-count: 5; } }
-
-        .pin-card {
-            break-inside: avoid;
-            margin-bottom: 16px;
-            position: relative;
-            cursor: zoom-in;
+        .timeline-line {
+            background: #515f74;
         }
-        .pin-image-container {
-            position: relative;
-            overflow: hidden;
-            border-radius: 16px;
+        .project-card-shadow {
+            box-shadow: 0 20px 25px -5px rgba(13, 28, 47, 0.05), 0 10px 10px -5px rgba(13, 28, 47, 0.02);
         }
-        .pin-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0,0,0,0.2);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 12px;
-        }
-        .pin-card:hover .pin-overlay {
-            opacity: 1;
-        }
-        .pin-action-btn {
-            background-color: #E60023;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 999px;
-            font-weight: 700;
-            font-size: 14px;
-            transition: background-color 0.2s;
-        }
-        .pin-action-btn:hover {
-            background-color: #ad081b;
+        .project-card-hover:hover {
+            box-shadow: 0 25px 30px -5px rgba(13, 28, 47, 0.15);
+            border-color: #000000;
         }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden">
 <!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm">
-<nav class="flex items-center h-20 px-8 max-w-container-max mx-auto gap-4">
-<div class="flex items-center gap-2 mr-4">
-<div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-xl">push_pin</span>
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant shadow-sm">
+<nav class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">PM Portfolio</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1" href="#hero">Hero</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#timeline">Timeline</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#projects">Projects</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#skills">Skills</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#education">Education</a>
 </div>
-<span class="font-headline-lg text-lg font-bold text-primary hidden sm:block">김한얼</span>
-</div>
-<div class="flex-grow flex items-center bg-surface-container rounded-full px-4 py-2.5">
-<span class="material-symbols-outlined text-secondary mr-2">search</span>
-<input class="bg-transparent border-none focus:ring-0 w-full text-sm" placeholder="경력, 역량, 프로젝트 검색..." type="text"/>
-</div>
-<div class="flex items-center gap-6">
-<a class="font-semibold text-sm hover:underline decoration-2 underline-offset-4" href="#hero">홈</a>
-<a class="font-semibold text-sm hover:underline decoration-2 underline-offset-4" href="#feed">탐색</a>
-<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center">
-<span class="material-symbols-outlined">person</span>
-</div>
-</div>
+<button class="bg-primary text-on-primary px-6 py-2 font-body-md font-medium scale-95 active:scale-90 transition-transform">
+                Contact Me
+            </button>
 </nav>
 </header>
-<main class="mt-24 px-gutter max-w-container-max mx-auto">
-<!-- Profile Header / Hero -->
-<section class="flex flex-col items-center py-12 text-center" id="hero">
-<div class="w-32 h-32 rounded-full bg-surface-container-high mb-6 overflow-hidden">
-<img alt="김한얼 AI Product Manager 가상 프로필" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7-SZUILYiDTl76bBZJLcMBZUq0h3sJ2SQVtWzHP6yylZTnNdV5qE7eZYj-dmcKy2r5PII7mScnl-WfgNwoQlFPM8zD8xA37Ehlbg-L0kIQdMhWa3UQiIhKuwDWdZ8LPdZfW6RjaCHzmlQXYlDJNAhiDcq7oybewmPrZmJF8CTu5Wgyc1cTUXG4LzKm6UN81oa22FySgbtkBAbN5sNwgKTZyV178nxP6PUiEB9KG5tEtoyYcpA3MAs1A"/>
+<main class="mt-16">
+<!-- Section 1: Hero -->
+<section class="relative min-h-[819px] flex items-center overflow-hidden" id="hero">
+<div class="absolute inset-0 geometric-bg z-0"></div>
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-gutter relative z-10">
+<div class="md:col-start-1 md:col-span-8 flex flex-col justify-center py-section-gap">
+<span class="font-label-caps text-label-caps text-secondary mb-4 uppercase tracking-widest">Executive Leadership &amp; Growth</span>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-6 max-w-3xl">
+                        Innovating at the intersection of business, technology, and user needs.
+                    </h1>
+<p class="font-body-lg text-body-lg text-secondary mb-10 max-w-2xl">
+                        Alex Kim | Senior Product Manager specialized in scaling B2B SaaS platforms with data-driven precision and cross-functional leadership.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-primary text-on-primary px-8 py-4 font-body-md font-bold text-center border border-primary hover:opacity-90 transition-opacity" href="#projects">
+                            View My Projects
+                        </a>
+<a class="bg-transparent text-primary px-8 py-4 font-body-md font-bold text-center border border-primary hover:bg-surface-container-low transition-colors" href="#contact">
+                            Contact Me
+                        </a>
 </div>
-<h1 class="font-headline-xl text-4xl mb-2">김한얼</h1>
-<p class="text-secondary max-w-xl mb-4">AI Product Manager | 복잡한 업무와 사용자 문제를 구조화하고, AI 기술을 실제 서비스와 비즈니스 성과로 전환합니다.</p>
-<p class="text-xs text-secondary max-w-xl mb-5">본 페이지의 회사, 프로젝트, 성과 수치, 학력은 포트폴리오 데모를 위해 구성한 가상 정보입니다.</p>
-<div class="flex gap-2">
-<button class="bg-surface-container font-semibold px-4 py-3 rounded-full hover:bg-outline-variant">공유</button>
-<button class="bg-surface-container font-semibold px-4 py-3 rounded-full hover:bg-outline-variant">프로필 편집</button>
+</div>
 </div>
 </section>
-<!-- The Masonry Feed -->
-<section class="masonry-grid pb-12" id="feed">
-<!-- Pin: Project 1 -->
-<div class="pin-card">
-<div class="pin-image-container">
-<img alt="가상 AI 제품 프로젝트 썸네일" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR2VXej_m1CuJbqoldo06n29t8NkM9qBRGj4q0wexJ9LsXbYi5T193_GjgI0LOCNkiMh6PvJXBZOF8lS2eJRqHbuqsivS1eE9Rrhq3gjWyHaAU3oo3uLhelPv55J-jp462EvakugZBvVs0EuD8-P1xLtAkjnNKnLByUhr2Qwc5HgBMDhSPmXUr_qQprxS5R8N8eWp2Egy5ECy_ZQvjSfnmeW0J3cqG76dqF04djLhAF6Epth-VkQ6RAw"/>
-<div class="pin-overlay">
-<div class="flex justify-end">
-<button class="pin-action-btn">저장</button>
-</div>
-<div class="flex justify-between items-center text-white">
-<div class="flex gap-2">
-<span class="bg-white/20 backdrop-blur px-2 py-1 rounded-full text-[10px] uppercase font-bold">프로젝트</span>
-</div>
-<span class="material-symbols-outlined text-sm">open_in_new</span>
+<!-- Section 2: Experience (Timeline) -->
+<section class="py-section-gap bg-surface" id="timeline">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-start-1 md:col-span-12 mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary">The Journey</h2>
+<div class="w-16 h-1 bg-primary mt-4"></div>
 </div>
 </div>
+<div class="relative max-w-4xl mx-auto pl-8 md:pl-0">
+<!-- Vertical Line -->
+<div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-0.5 h-full timeline-line opacity-20"></div>
+<!-- Role 1 -->
+<div class="relative mb-24 flex flex-col md:flex-row md:items-center">
+<div class="absolute left-[-8px] md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 rounded-full bg-primary z-10 ring-4 ring-background"></div>
+<div class="md:w-1/2 md:pr-12 md:text-right">
+<span class="font-label-caps text-label-caps text-secondary-fixed-dim">2021 — PRESENT</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-2">Senior Product Manager</h3>
+<p class="font-body-md text-secondary font-medium mb-4">SaaS Velocity Solutions</p>
 </div>
-<h3 class="font-bold text-sm mt-2 px-1">AI Workflow Studio</h3>
-<p class="text-xs text-secondary px-1">계획, 실행, 메모리, 협업을 연결하는 기업용 멀티 에이전트 워크스페이스.</p>
-</div>
-<!-- Pin: Milestone 1 -->
-<div class="pin-card">
-<div class="pin-image-container relative bg-emerald-50 aspect-[3/4] flex items-center justify-center p-8">
-<img alt="Lead AI PM @ Atlas AI Labs 썸네일" class="absolute inset-0 w-full h-full object-cover" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22900%22%20height%3D%221100%22%20viewBox%3D%220%200%20900%201100%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23065f46%22/%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2310b981%22/%3E%0A%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22s%22%3E%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2218%22%20stdDeviation%3D%2224%22%20flood-opacity%3D%22.18%22/%3E%3C/filter%3E%0A%20%20%20%20%3C/defs%3E%0A%20%20%20%20%3Crect%20width%3D%22900%22%20height%3D%221100%22%20rx%3D%2248%22%20fill%3D%22url%28%23g%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22760%22%20cy%3D%22150%22%20r%3D%22170%22%20fill%3D%22white%22%20opacity%3D%22.10%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22120%22%20cy%3D%22930%22%20r%3D%22230%22%20fill%3D%22white%22%20opacity%3D%22.08%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2270%22%20y%3D%2290%22%20width%3D%22760%22%20height%3D%22920%22%20rx%3D%2236%22%20fill%3D%22white%22%20opacity%3D%22.12%22%20filter%3D%22url%28%23s%29%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22225%22%20font-size%3D%22112%22%20font-family%3D%22Arial%2C%20sans-serif%22%3E%F0%9F%9A%80%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22620%22%20font-size%3D%2258%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20font-family%3D%22Arial%2C%20sans-serif%22%3ELead%20AI%20PM%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22690%22%20font-size%3D%2230%22%20fill%3D%22white%22%20opacity%3D%22.88%22%20font-family%3D%22Arial%2C%20sans-serif%22%3EAtlas%20AI%20Labs%20%C2%B7%202024%E2%80%93%ED%98%84%EC%9E%AC%3C/text%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22790%22%20width%3D%22220%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.75%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22825%22%20width%3D%22420%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22860%22%20width%3D%22330%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3C/svg%3E"/>
-<div class="absolute inset-0 bg-black/10"></div>
-<div class="text-center">
-<span class="material-symbols-outlined text-emerald-600 text-5xl mb-4">trending_up</span>
-<h4 class="font-headline-lg text-xl mb-2">Lead AI PM @ Atlas AI Labs</h4>
-<p class="text-sm text-emerald-800">AI Agent Workspace 전략과 MVP를 주도해 업무 완료 시간을 68% 단축했습니다.</p>
-</div>
-<div class="pin-overlay">
-<div class="flex justify-end">
-<button class="pin-action-btn">보기</button>
-</div>
-</div>
-</div>
-<h3 class="font-bold text-sm mt-2 px-1">경력: 2024 — 현재</h3>
-</div>
-<!-- Pin: Skill 1 -->
-<div class="pin-card">
-<div class="pin-image-container relative bg-blue-50 aspect-[4/5] flex flex-col justify-end p-6">
-<img alt="AI Product Strategy 썸네일" class="absolute inset-0 w-full h-full object-cover" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22900%22%20height%3D%221100%22%20viewBox%3D%220%200%20900%201100%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%231e3a8a%22/%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%233b82f6%22/%3E%0A%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22s%22%3E%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2218%22%20stdDeviation%3D%2224%22%20flood-opacity%3D%22.18%22/%3E%3C/filter%3E%0A%20%20%20%20%3C/defs%3E%0A%20%20%20%20%3Crect%20width%3D%22900%22%20height%3D%221100%22%20rx%3D%2248%22%20fill%3D%22url%28%23g%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22760%22%20cy%3D%22150%22%20r%3D%22170%22%20fill%3D%22white%22%20opacity%3D%22.10%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22120%22%20cy%3D%22930%22%20r%3D%22230%22%20fill%3D%22white%22%20opacity%3D%22.08%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2270%22%20y%3D%2290%22%20width%3D%22760%22%20height%3D%22920%22%20rx%3D%2236%22%20fill%3D%22white%22%20opacity%3D%22.12%22%20filter%3D%22url%28%23s%29%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22225%22%20font-size%3D%22112%22%20font-family%3D%22Arial%2C%20sans-serif%22%3E%F0%9F%A7%AD%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22620%22%20font-size%3D%2258%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20font-family%3D%22Arial%2C%20sans-serif%22%3EAI%20Product%20Strategy%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22690%22%20font-size%3D%2230%22%20fill%3D%22white%22%20opacity%3D%22.88%22%20font-family%3D%22Arial%2C%20sans-serif%22%3EBusiness%20%C2%B7%20UX%20%C2%B7%20Technology%3C/text%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22790%22%20width%3D%22220%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.75%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22825%22%20width%3D%22420%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22860%22%20width%3D%22330%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3C/svg%3E"/>
-<div class="absolute inset-0 bg-black/10"></div>
-<h4 class="font-headline-lg text-2xl text-blue-900 mb-2">AI Product Strategy</h4>
-<p class="text-sm text-blue-700">정성 리서치, 데이터, 비즈니스 전략을 결합해 AI 제품 방향을 설계합니다.</p>
-<div class="pin-overlay">
-<div class="flex justify-end">
-<button class="pin-action-btn">더 보기</button>
+<div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
+<ul class="space-y-3 list-none">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-on-tertiary-container mt-1" style="font-size: 18px;">check_circle</span>
+<span class="font-body-md text-on-surface-variant">Led a team of 15 to overhaul the core enterprise API, increasing user retention by 25% within 6 months.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-on-tertiary-container mt-1" style="font-size: 18px;">check_circle</span>
+<span class="font-body-md text-on-surface-variant">Strategized and executed the GTM for "Velocity Flow", capturing $1.2M in new pipeline within the first quarter.</span>
+</li>
+</ul>
 </div>
 </div>
+<!-- Role 2 -->
+<div class="relative mb-24 flex flex-col md:flex-row-reverse md:items-center">
+<div class="absolute left-[-8px] md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 rounded-full bg-primary z-10 ring-4 ring-background"></div>
+<div class="md:w-1/2 md:pl-12">
+<span class="font-label-caps text-label-caps text-secondary-fixed-dim">2018 — 2021</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-2">Product Manager</h3>
+<p class="font-body-md text-secondary font-medium mb-4">Fintech Core Systems</p>
 </div>
-<h3 class="font-bold text-sm mt-2 px-1">역량: 제품 전략</h3>
-</div>
-<!-- Pin: Project 2 -->
-<div class="pin-card">
-<div class="pin-image-container">
-<img alt="가상 AI 제품 프로젝트 썸네일" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWdGvzomQAUVVy1pnF1IEStAlwkpaWhb2PIrnDSOfbW-MXG7Z3STfgkz0iH281stN1PdopmBUlDICtcF7aulPoUGfWIkQhMd1tXxstXfLfMPCH3kWKEecwAM117uFYIKNrWezoqvkvH3Q8qhKl-XgyvBdgb49gDxZwSNPlFX0fyhxZdPRYnLmEt04oA6HXQAA4iuZFQcEeCryJYTFNbffhKWl6a5h-Vy_WjHHD0AQXwTV-Iv-uI6GveA"/>
-<div class="pin-overlay">
-<div class="flex justify-end">
-<button class="pin-action-btn">저장</button>
-</div>
-<div class="flex items-center text-white text-xs font-bold">
-                            케이스 스터디
-                        </div>
+<div class="md:w-1/2 md:pr-12 mt-4 md:mt-0 md:text-right">
+<ul class="space-y-3 list-none inline-block text-left">
+<li class="flex items-start gap-3 md:flex-row-reverse">
+<span class="material-symbols-outlined text-on-tertiary-container mt-1" style="font-size: 18px;">check_circle</span>
+<span class="font-body-md text-on-surface-variant md:text-right">Launched the first automated compliance engine for Tier 1 banks, reducing manual review time by 40%.</span>
+</li>
+<li class="flex items-start gap-3 md:flex-row-reverse">
+<span class="material-symbols-outlined text-on-tertiary-container mt-1" style="font-size: 18px;">check_circle</span>
+<span class="font-body-md text-on-surface-variant md:text-right">Managed a cross-functional squad of 10 through 12 major release cycles using Agile methodologies.</span>
+</li>
+</ul>
 </div>
 </div>
-<h3 class="font-bold text-sm mt-2 px-1">ERP Copilot</h3>
-<p class="text-xs text-secondary px-1">업무 맥락을 이해하고 다음 행동을 제안하는 LLM 기반 ERP 보조 도구.</p>
+<!-- Role 3 -->
+<div class="relative flex flex-col md:flex-row md:items-center">
+<div class="absolute left-[-8px] md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 rounded-full bg-primary z-10 ring-4 ring-background"></div>
+<div class="md:w-1/2 md:pr-12 md:text-right">
+<span class="font-label-caps text-label-caps text-secondary-fixed-dim">2015 — 2018</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-2">Associate Product Manager</h3>
+<p class="font-body-md text-secondary font-medium mb-4">GrowthLabs Inc.</p>
 </div>
-<!-- Pin: Skill 2 -->
-<div class="pin-card">
-<div class="pin-image-container relative bg-purple-50 aspect-square flex items-center justify-center p-6">
-<img alt="SQL & Python 썸네일" class="absolute inset-0 w-full h-full object-cover" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22900%22%20height%3D%221100%22%20viewBox%3D%220%200%20900%201100%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23581c87%22/%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a855f7%22/%3E%0A%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22s%22%3E%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2218%22%20stdDeviation%3D%2224%22%20flood-opacity%3D%22.18%22/%3E%3C/filter%3E%0A%20%20%20%20%3C/defs%3E%0A%20%20%20%20%3Crect%20width%3D%22900%22%20height%3D%221100%22%20rx%3D%2248%22%20fill%3D%22url%28%23g%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22760%22%20cy%3D%22150%22%20r%3D%22170%22%20fill%3D%22white%22%20opacity%3D%22.10%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22120%22%20cy%3D%22930%22%20r%3D%22230%22%20fill%3D%22white%22%20opacity%3D%22.08%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2270%22%20y%3D%2290%22%20width%3D%22760%22%20height%3D%22920%22%20rx%3D%2236%22%20fill%3D%22white%22%20opacity%3D%22.12%22%20filter%3D%22url%28%23s%29%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22225%22%20font-size%3D%22112%22%20font-family%3D%22Arial%2C%20sans-serif%22%3E%F0%9F%93%8A%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22620%22%20font-size%3D%2258%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20font-family%3D%22Arial%2C%20sans-serif%22%3ESQL%20%26amp%3B%20Python%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22690%22%20font-size%3D%2230%22%20fill%3D%22white%22%20opacity%3D%22.88%22%20font-family%3D%22Arial%2C%20sans-serif%22%3EData%20analysis%20and%20prototyping%3C/text%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22790%22%20width%3D%22220%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.75%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22825%22%20width%3D%22420%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22860%22%20width%3D%22330%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3C/svg%3E"/>
-<div class="absolute inset-0 bg-black/10"></div>
-<div class="text-center">
-<span class="material-symbols-outlined text-purple-600 text-4xl mb-2">database</span>
-<h4 class="font-headline-lg text-lg">SQL &amp; Python</h4>
-</div>
-<div class="pin-overlay">
-<div class="flex justify-end">
-<button class="pin-action-btn">보기</button>
+<div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
+<ul class="space-y-3 list-none">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-on-tertiary-container mt-1" style="font-size: 18px;">check_circle</span>
+<span class="font-body-md text-on-surface-variant">Drove a 15% increase in trial-to-paid conversion rates through intensive A/B testing and user journey mapping.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-on-tertiary-container mt-1" style="font-size: 18px;">check_circle</span>
+<span class="font-body-md text-on-surface-variant">Conducted 50+ user interviews annually to inform the product roadmap and prioritize feature backlog.</span>
+</li>
+</ul>
 </div>
 </div>
 </div>
-<h3 class="font-bold text-sm mt-2 px-1">역량: 데이터 스택</h3>
 </div>
-<!-- Pin: Milestone 2 -->
-<div class="pin-card">
-<div class="pin-image-container relative bg-amber-50 aspect-[3/5] flex flex-col justify-center p-8">
-<img alt="Senior Product Manager 썸네일" class="absolute inset-0 w-full h-full object-cover" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22900%22%20height%3D%221100%22%20viewBox%3D%220%200%20900%201100%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2392400e%22/%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f59e0b%22/%3E%0A%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22s%22%3E%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2218%22%20stdDeviation%3D%2224%22%20flood-opacity%3D%22.18%22/%3E%3C/filter%3E%0A%20%20%20%20%3C/defs%3E%0A%20%20%20%20%3Crect%20width%3D%22900%22%20height%3D%221100%22%20rx%3D%2248%22%20fill%3D%22url%28%23g%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22760%22%20cy%3D%22150%22%20r%3D%22170%22%20fill%3D%22white%22%20opacity%3D%22.10%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22120%22%20cy%3D%22930%22%20r%3D%22230%22%20fill%3D%22white%22%20opacity%3D%22.08%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2270%22%20y%3D%2290%22%20width%3D%22760%22%20height%3D%22920%22%20rx%3D%2236%22%20fill%3D%22white%22%20opacity%3D%22.12%22%20filter%3D%22url%28%23s%29%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22225%22%20font-size%3D%22112%22%20font-family%3D%22Arial%2C%20sans-serif%22%3E%F0%9F%A7%A9%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22620%22%20font-size%3D%2258%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20font-family%3D%22Arial%2C%20sans-serif%22%3ESenior%20Product%20Manager%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22690%22%20font-size%3D%2230%22%20fill%3D%22white%22%20opacity%3D%22.88%22%20font-family%3D%22Arial%2C%20sans-serif%22%3ENovaFlow%20%C2%B7%202021%E2%80%932024%3C/text%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22790%22%20width%3D%22220%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.75%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22825%22%20width%3D%22420%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22860%22%20width%3D%22330%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3C/svg%3E"/>
-<div class="absolute inset-0 bg-black/10"></div>
-<span class="text-amber-800 font-bold text-xs uppercase tracking-widest mb-4">2021 — 2024</span>
-<h4 class="font-headline-lg text-2xl text-amber-900 mb-4">Senior Product Manager</h4>
-<p class="text-sm text-amber-800 leading-relaxed">중소기업 ERP Copilot을 기획해 고객 활성화율을 42%에서 71%로 높였습니다.</p>
-<div class="pin-overlay">
-<div class="flex justify-end">
-<button class="pin-action-btn">경력 보기</button>
+</section>
+<!-- Section 3: Featured Projects -->
+<section class="py-section-gap" id="projects">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="mb-16 text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary">Impact &amp; Outcomes</h2>
+<p class="font-body-md text-secondary mt-2">Solving complex problems with measurable results.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Project Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 project-card-shadow project-card-hover transition-all duration-300 flex flex-col">
+<div class="aspect-video w-full mb-6 overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A professional high-fidelity screenshot of a modern B2B SaaS dashboard featuring clean data visualizations, dark blue and emerald green accents, and a sophisticated minimalist UI. The scene is bright and corporate with a focus on product metrics and user analytics. Professional photography style, daylight office setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR2VXej_m1CuJbqoldo06n29t8NkM9qBRGj4q0wexJ9LsXbYi5T193_GjgI0LOCNkiMh6PvJXBZOF8lS2eJRqHbuqsivS1eE9Rrhq3gjWyHaAU3oo3uLhelPv55J-jp462EvakugZBvVs0EuD8-P1xLtAkjnNKnLByUhr2Qwc5HgBMDhSPmXUr_qQprxS5R8N8eWp2Egy5ECy_ZQvjSfnmeW0J3cqG76dqF04djLhAF6Epth-VkQ6RAw"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<span class="bg-surface-container px-3 py-1 font-label-caps text-label-caps text-secondary uppercase tracking-wider">Enterprise Scale</span>
+<div class="flex items-center text-on-tertiary-container font-label-caps font-bold">
+<span class="material-symbols-outlined mr-1" style="font-size: 14px;">trending_up</span>
+                                $2M ARR Growth
+                            </div>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Velocity Flow Infrastructure</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">
+<strong>Problem:</strong> Fragmented user data was causing a 12% monthly churn in enterprise clients.<br/>
+<strong>Solution:</strong> Developed an integrated data pipeline that synchronized cross-platform metrics in real-time.
+                        </p>
+<button class="flex items-center text-primary font-bold font-body-md hover:translate-x-1 transition-transform">
+                            Read Case Study <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</button>
+</div>
+<!-- Project Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 project-card-shadow project-card-hover transition-all duration-300 flex flex-col">
+<div class="aspect-video w-full mb-6 overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A clean, minimalist UI design for a financial technology mobile application. The screen displays a sleek compliance monitoring tool with sophisticated slate blue and soft grey tones. Soft studio lighting highlights the precise typography and sharp 4px corners of the interface components. High-end executive aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWdGvzomQAUVVy1pnF1IEStAlwkpaWhb2PIrnDSOfbW-MXG7Z3STfgkz0iH281stN1PdopmBUlDICtcF7aulPoUGfWIkQhMd1tXxstXfLfMPCH3kWKEecwAM117uFYIKNrWezoqvkvH3Q8qhKl-XgyvBdgb49gDxZwSNPlFX0fyhxZdPRYnLmEt04oA6HXQAA4iuZFQcEeCryJYTFNbffhKWl6a5h-Vy_WjHHD0AQXwTV-Iv-uI6GveA"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<span class="bg-surface-container px-3 py-1 font-label-caps text-label-caps text-secondary uppercase tracking-wider">Fintech SaaS</span>
+<div class="flex items-center text-on-tertiary-container font-label-caps font-bold">
+<span class="material-symbols-outlined mr-1" style="font-size: 14px;">groups</span>
+                                50k MAU Added
+                            </div>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Compliance Engine 2.0</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">
+<strong>Problem:</strong> Manual review processes were throttling user onboarding and growth for fintech partners.<br/>
+<strong>Solution:</strong> Engineered an AI-driven compliance automation tool with 99.8% verification accuracy.
+                        </p>
+<button class="flex items-center text-primary font-bold font-body-md hover:translate-x-1 transition-transform">
+                            Read Case Study <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</button>
+</div>
+<!-- Project Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 project-card-shadow project-card-hover transition-all duration-300 flex flex-col">
+<div class="aspect-video w-full mb-6 overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="A macro shot of a sleek, high-end laptop on a white desk, displaying complex product roadmaps and strategic charts. The environment is a modern, sun-drenched office space with minimalist decor. The color palette consists of whites, light greys, and deep navy blue. Corporate professional photography, crisp focus, shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7-SZUILYiDTl76bBZJLcMBZUq0h3sJ2SQVtWzHP6yylZTnNdV5qE7eZYj-dmcKy2r5PII7mScnl-WfgNwoQlFPM8zD8xA37Ehlbg-L0kIQdMhWa3UQiIhKuwDWdZ8LPdZfW6RjaCHzmlQXYlDJNAhiDcq7oybewmPrZmJF8CTu5Wgyc1cTUXG4LzKm6UN81oa22FySgbtkBAbN5sNwgKTZyV178nxP6PUiEB9KG5tEtoyYcpA3MAs1A"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<span class="bg-surface-container px-3 py-1 font-label-caps text-label-caps text-secondary uppercase tracking-wider">Growth Optimization</span>
+<div class="flex items-center text-on-tertiary-container font-label-caps font-bold">
+<span class="material-symbols-outlined mr-1" style="font-size: 14px;">check_circle</span>
+                                +30% Conversion
+                            </div>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Conversion Optimizer</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">
+<strong>Problem:</strong> High drop-off rate during the complex B2B sign-up flow was impacting the sales funnel.<br/>
+<strong>Solution:</strong> Redesigned the multi-step onboarding journey using behavioral psychology and friction-reduction techniques.
+                        </p>
+<button class="flex items-center text-primary font-bold font-body-md hover:translate-x-1 transition-transform">
+                            Read Case Study <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</button>
 </div>
 </div>
 </div>
-<h3 class="font-bold text-sm mt-2 px-1">경력: NovaFlow Technologies</h3>
+</section>
+<!-- Section 4: Skills & Expertise -->
+<section class="py-section-gap bg-surface-container-low" id="skills">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-4">
+<h2 class="font-headline-lg text-headline-lg text-primary">Strategic Toolkit</h2>
+<p class="font-body-md text-secondary mt-4 max-w-sm">
+                            A multidisciplinary approach blending quantitative analysis with qualitative empathy to deliver market-leading products.
+                        </p>
 </div>
-<!-- Pin: Project 3 -->
-<div class="pin-card">
-<div class="pin-image-container">
-<img alt="가상 AI 제품 프로젝트 썸네일" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7-SZUILYiDTl76bBZJLcMBZUq0h3sJ2SQVtWzHP6yylZTnNdV5qE7eZYj-dmcKy2r5PII7mScnl-WfgNwoQlFPM8zD8xA37Ehlbg-L0kIQdMhWa3UQiIhKuwDWdZ8LPdZfW6RjaCHzmlQXYlDJNAhiDcq7oybewmPrZmJF8CTu5Wgyc1cTUXG4LzKm6UN81oa22FySgbtkBAbN5sNwgKTZyV178nxP6PUiEB9KG5tEtoyYcpA3MAs1A"/>
-<div class="pin-overlay">
-<div class="flex justify-end">
-<button class="pin-action-btn">저장</button>
+<div class="md:col-span-8">
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+<div class="bg-surface p-6 border border-outline-variant">
+<span class="material-symbols-outlined text-primary mb-4" style="font-size: 32px;">strategy</span>
+<p class="font-label-caps text-label-caps text-secondary uppercase mb-1">Expertise</p>
+<p class="font-headline-md text-headline-md text-primary">Product Strategy</p>
+</div>
+<div class="bg-surface p-6 border border-outline-variant">
+<span class="material-symbols-outlined text-primary mb-4" style="font-size: 32px;">database</span>
+<p class="font-label-caps text-label-caps text-secondary uppercase mb-1">Stack</p>
+<p class="font-headline-md text-headline-md text-primary">SQL &amp; Tableau</p>
+</div>
+<div class="bg-surface p-6 border border-outline-variant">
+<span class="material-symbols-outlined text-primary mb-4" style="font-size: 32px;">sync</span>
+<p class="font-label-caps text-label-caps text-secondary uppercase mb-1">Process</p>
+<p class="font-headline-md text-headline-md text-primary">Agile / Scrum</p>
+</div>
+<div class="bg-surface p-6 border border-outline-variant">
+<span class="material-symbols-outlined text-primary mb-4" style="font-size: 32px;">person_search</span>
+<p class="font-label-caps text-label-caps text-secondary uppercase mb-1">Inquiry</p>
+<p class="font-headline-md text-headline-md text-primary">User Research</p>
+</div>
+<div class="bg-surface p-6 border border-outline-variant">
+<span class="material-symbols-outlined text-primary mb-4" style="font-size: 32px;">rocket_launch</span>
+<p class="font-label-caps text-label-caps text-secondary uppercase mb-1">Commercial</p>
+<p class="font-headline-md text-headline-md text-primary">GTM Strategy</p>
+</div>
+<div class="bg-surface p-6 border border-outline-variant">
+<span class="material-symbols-outlined text-primary mb-4" style="font-size: 32px;">science</span>
+<p class="font-label-caps text-label-caps text-secondary uppercase mb-1">Growth</p>
+<p class="font-headline-md text-headline-md text-primary">A/B Testing</p>
 </div>
 </div>
 </div>
-<h3 class="font-bold text-sm mt-2 px-1">PM Intelligence Workspace</h3>
-<p class="text-xs text-secondary px-1">리서치, VOC, 로드맵, 실험 우선순위를 통합한 AI PM 업무 공간.</p>
-</div>
-<!-- Pin: Education -->
-<div class="pin-card">
-<div class="pin-image-container relative bg-slate-50 aspect-square flex flex-col items-center justify-center p-6 text-center">
-<img alt="M.S. Human-Centered AI 썸네일" class="absolute inset-0 w-full h-full object-cover" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22900%22%20height%3D%221100%22%20viewBox%3D%220%200%20900%201100%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23334155%22/%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2364748b%22/%3E%0A%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22s%22%3E%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2218%22%20stdDeviation%3D%2224%22%20flood-opacity%3D%22.18%22/%3E%3C/filter%3E%0A%20%20%20%20%3C/defs%3E%0A%20%20%20%20%3Crect%20width%3D%22900%22%20height%3D%221100%22%20rx%3D%2248%22%20fill%3D%22url%28%23g%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22760%22%20cy%3D%22150%22%20r%3D%22170%22%20fill%3D%22white%22%20opacity%3D%22.10%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22120%22%20cy%3D%22930%22%20r%3D%22230%22%20fill%3D%22white%22%20opacity%3D%22.08%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2270%22%20y%3D%2290%22%20width%3D%22760%22%20height%3D%22920%22%20rx%3D%2236%22%20fill%3D%22white%22%20opacity%3D%22.12%22%20filter%3D%22url%28%23s%29%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22225%22%20font-size%3D%22112%22%20font-family%3D%22Arial%2C%20sans-serif%22%3E%F0%9F%8E%93%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22620%22%20font-size%3D%2258%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20font-family%3D%22Arial%2C%20sans-serif%22%3EHuman-Centered%20AI%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22690%22%20font-size%3D%2230%22%20fill%3D%22white%22%20opacity%3D%22.88%22%20font-family%3D%22Arial%2C%20sans-serif%22%3EFictional%20Graduate%20Program%3C/text%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22790%22%20width%3D%22220%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.75%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22825%22%20width%3D%22420%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22860%22%20width%3D%22330%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3C/svg%3E"/>
-<div class="absolute inset-0 bg-black/10"></div>
-<span class="material-symbols-outlined text-3xl mb-2">school</span>
-<h4 class="font-bold text-sm">M.S. Human-Centered AI</h4>
-<p class="text-[10px] text-secondary mt-1">Future Institute · Fictional</p>
-<div class="pin-overlay">
-<div class="flex justify-end">
-<button class="pin-action-btn">보기</button>
 </div>
 </div>
-</div>
-<h3 class="font-bold text-sm mt-2 px-1">교육</h3>
-</div>
-<!-- Pin: Skill 3 -->
-<div class="pin-card">
-<div class="pin-image-container relative bg-rose-50 aspect-[4/5] p-6 flex flex-col justify-between">
-<img alt="Product Discovery 썸네일" class="absolute inset-0 w-full h-full object-cover" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22900%22%20height%3D%221100%22%20viewBox%3D%220%200%20900%201100%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%239f1239%22/%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fb7185%22/%3E%0A%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22s%22%3E%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2218%22%20stdDeviation%3D%2224%22%20flood-opacity%3D%22.18%22/%3E%3C/filter%3E%0A%20%20%20%20%3C/defs%3E%0A%20%20%20%20%3Crect%20width%3D%22900%22%20height%3D%221100%22%20rx%3D%2248%22%20fill%3D%22url%28%23g%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22760%22%20cy%3D%22150%22%20r%3D%22170%22%20fill%3D%22white%22%20opacity%3D%22.10%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22120%22%20cy%3D%22930%22%20r%3D%22230%22%20fill%3D%22white%22%20opacity%3D%22.08%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2270%22%20y%3D%2290%22%20width%3D%22760%22%20height%3D%22920%22%20rx%3D%2236%22%20fill%3D%22white%22%20opacity%3D%22.12%22%20filter%3D%22url%28%23s%29%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22225%22%20font-size%3D%22112%22%20font-family%3D%22Arial%2C%20sans-serif%22%3E%F0%9F%94%8E%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22620%22%20font-size%3D%2258%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20font-family%3D%22Arial%2C%20sans-serif%22%3EProduct%20Discovery%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22690%22%20font-size%3D%2230%22%20fill%3D%22white%22%20opacity%3D%22.88%22%20font-family%3D%22Arial%2C%20sans-serif%22%3EResearch%20%C2%B7%20Hypothesis%20%C2%B7%20Validation%3C/text%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22790%22%20width%3D%22220%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.75%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22825%22%20width%3D%22420%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22860%22%20width%3D%22330%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3C/svg%3E"/>
-<div class="absolute inset-0 bg-black/10"></div>
-<span class="material-symbols-outlined text-rose-600">sync</span>
+</section>
+<!-- Section 5: Education & Certifications -->
+<section class="py-section-gap" id="education">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
 <div>
-<h4 class="font-headline-lg text-xl text-rose-900">Product Discovery</h4>
-<p class="text-xs text-rose-700 mt-2">문제 정의, 가설, 검증, 로드맵을 반복적으로 연결하는 제품 발견 프로세스.</p>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Foundation</h2>
+<div class="space-y-8">
+<div class="flex items-start gap-6">
+<div class="bg-primary text-on-primary w-12 h-12 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">school</span>
 </div>
-<div class="pin-overlay">
-<div class="flex justify-end">
-<button class="pin-action-btn">상세 보기</button>
-</div>
-</div>
-</div>
-<h3 class="font-bold text-sm mt-2 px-1">역량: 제품 발견</h3>
-</div>
-<!-- Pin: Milestone 3 -->
-<div class="pin-card">
-<div class="pin-image-container relative bg-indigo-50 aspect-[2/3] p-8 flex flex-col justify-end">
-<img alt="BrightScale Studio 썸네일" class="absolute inset-0 w-full h-full object-cover" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22900%22%20height%3D%221100%22%20viewBox%3D%220%200%20900%201100%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%233730a3%22/%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23818cf8%22/%3E%0A%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22s%22%3E%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2218%22%20stdDeviation%3D%2224%22%20flood-opacity%3D%22.18%22/%3E%3C/filter%3E%0A%20%20%20%20%3C/defs%3E%0A%20%20%20%20%3Crect%20width%3D%22900%22%20height%3D%221100%22%20rx%3D%2248%22%20fill%3D%22url%28%23g%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22760%22%20cy%3D%22150%22%20r%3D%22170%22%20fill%3D%22white%22%20opacity%3D%22.10%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22120%22%20cy%3D%22930%22%20r%3D%22230%22%20fill%3D%22white%22%20opacity%3D%22.08%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2270%22%20y%3D%2290%22%20width%3D%22760%22%20height%3D%22920%22%20rx%3D%2236%22%20fill%3D%22white%22%20opacity%3D%22.12%22%20filter%3D%22url%28%23s%29%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22225%22%20font-size%3D%22112%22%20font-family%3D%22Arial%2C%20sans-serif%22%3E%F0%9F%93%88%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22620%22%20font-size%3D%2258%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20font-family%3D%22Arial%2C%20sans-serif%22%3EBrightScale%20Studio%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22690%22%20font-size%3D%2230%22%20fill%3D%22white%22%20opacity%3D%22.88%22%20font-family%3D%22Arial%2C%20sans-serif%22%3EProduct%20Manager%20%C2%B7%202018%E2%80%932021%3C/text%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22790%22%20width%3D%22220%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.75%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22825%22%20width%3D%22420%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22860%22%20width%3D%22330%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3C/svg%3E"/>
-<div class="absolute inset-0 bg-black/10"></div>
-<h4 class="font-headline-lg text-2xl text-indigo-900 mb-2">BrightScale Studio</h4>
-<p class="text-sm text-indigo-700">200회 이상의 사용자 인터뷰와 행동 데이터를 기반으로 전환율을 30% 개선했습니다.</p>
-<div class="pin-overlay">
-<div class="flex justify-end">
-<button class="pin-action-btn">이력 보기</button>
-</div>
-</div>
-</div>
-<h3 class="font-bold text-sm mt-2 px-1">초기 경력: 2018–2021</h3>
-</div>
-<!-- Pin: Skill 4 -->
-<div class="pin-card">
-<div class="pin-image-container relative bg-cyan-50 aspect-[4/5] p-6 flex flex-col justify-between">
-<img alt="Agent Systems 썸네일" class="absolute inset-0 w-full h-full object-cover" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22900%22%20height%3D%221100%22%20viewBox%3D%220%200%20900%201100%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23155e75%22/%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2322d3ee%22/%3E%0A%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22s%22%3E%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2218%22%20stdDeviation%3D%2224%22%20flood-opacity%3D%22.18%22/%3E%3C/filter%3E%0A%20%20%20%20%3C/defs%3E%0A%20%20%20%20%3Crect%20width%3D%22900%22%20height%3D%221100%22%20rx%3D%2248%22%20fill%3D%22url%28%23g%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22760%22%20cy%3D%22150%22%20r%3D%22170%22%20fill%3D%22white%22%20opacity%3D%22.10%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22120%22%20cy%3D%22930%22%20r%3D%22230%22%20fill%3D%22white%22%20opacity%3D%22.08%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2270%22%20y%3D%2290%22%20width%3D%22760%22%20height%3D%22920%22%20rx%3D%2236%22%20fill%3D%22white%22%20opacity%3D%22.12%22%20filter%3D%22url%28%23s%29%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22225%22%20font-size%3D%22112%22%20font-family%3D%22Arial%2C%20sans-serif%22%3E%F0%9F%A4%96%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22620%22%20font-size%3D%2258%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20font-family%3D%22Arial%2C%20sans-serif%22%3EAgent%20Systems%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22690%22%20font-size%3D%2230%22%20fill%3D%22white%22%20opacity%3D%22.88%22%20font-family%3D%22Arial%2C%20sans-serif%22%3ELLM%20%C2%B7%20RAG%20%C2%B7%20Tool%20Use%20%C2%B7%20Memory%3C/text%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22790%22%20width%3D%22220%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.75%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22825%22%20width%3D%22420%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22860%22%20width%3D%22330%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3C/svg%3E"/>
-<div class="absolute inset-0 bg-black/10"></div>
-<span class="material-symbols-outlined text-cyan-700">smart_toy</span>
 <div>
-<h4 class="font-headline-lg text-xl text-cyan-900">Agent Systems</h4>
-<p class="text-xs text-cyan-700 mt-2">LLM, RAG, tool use, memory, orchestration을 제품 관점에서 설계합니다.</p>
-</div>
-<div class="pin-overlay">
-<div class="flex justify-end">
-<button class="pin-action-btn">상세 보기</button>
+<h4 class="font-headline-md text-headline-md text-primary">MBA in Technology Management</h4>
+<p class="font-body-md text-secondary">Stanford Graduate School of Business | 2013 — 2015</p>
 </div>
 </div>
+<div class="flex items-start gap-6">
+<div class="bg-primary text-on-primary w-12 h-12 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">history_edu</span>
 </div>
-<h3 class="font-bold text-sm mt-2 px-1">역량: AI 시스템</h3>
-</div>
-
-<!-- Pin: Metric -->
-<div class="pin-card">
-<div class="pin-image-container relative bg-lime-50 aspect-square flex flex-col items-center justify-center p-6 text-center">
-<img alt="73% 썸네일" class="absolute inset-0 w-full h-full object-cover" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22900%22%20height%3D%221100%22%20viewBox%3D%220%200%20900%201100%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%233f6212%22/%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2384cc16%22/%3E%0A%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22s%22%3E%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2218%22%20stdDeviation%3D%2224%22%20flood-opacity%3D%22.18%22/%3E%3C/filter%3E%0A%20%20%20%20%3C/defs%3E%0A%20%20%20%20%3Crect%20width%3D%22900%22%20height%3D%221100%22%20rx%3D%2248%22%20fill%3D%22url%28%23g%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22760%22%20cy%3D%22150%22%20r%3D%22170%22%20fill%3D%22white%22%20opacity%3D%22.10%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22120%22%20cy%3D%22930%22%20r%3D%22230%22%20fill%3D%22white%22%20opacity%3D%22.08%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2270%22%20y%3D%2290%22%20width%3D%22760%22%20height%3D%22920%22%20rx%3D%2236%22%20fill%3D%22white%22%20opacity%3D%22.12%22%20filter%3D%22url%28%23s%29%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22225%22%20font-size%3D%22112%22%20font-family%3D%22Arial%2C%20sans-serif%22%3E%E2%9A%A1%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22620%22%20font-size%3D%2258%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20font-family%3D%22Arial%2C%20sans-serif%22%3E73%25%20Faster%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22690%22%20font-size%3D%2230%22%20fill%3D%22white%22%20opacity%3D%22.88%22%20font-family%3D%22Arial%2C%20sans-serif%22%3EPM%20documentation%20workflow%3C/text%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22790%22%20width%3D%22220%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.75%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22825%22%20width%3D%22420%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22860%22%20width%3D%22330%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3C/svg%3E"/>
-<div class="absolute inset-0 bg-black/10"></div>
-<span class="material-symbols-outlined text-lime-700 text-4xl mb-3">speed</span>
-<h4 class="font-headline-lg text-3xl text-lime-900">73%</h4>
-<p class="text-xs text-lime-800 mt-2">PM 문서화 및 리서치 통합 시간 단축</p>
-<div class="pin-overlay">
-<div class="flex justify-end">
-<button class="pin-action-btn">성과 보기</button>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary">B.S. in Computer Science</h4>
+<p class="font-body-md text-secondary">University of California, Berkeley | 2009 — 2013</p>
 </div>
 </div>
 </div>
-<h3 class="font-bold text-sm mt-2 px-1">PM Intelligence 성과</h3>
 </div>
-
-<!-- Pin: Contact CTA -->
-<div class="pin-card">
-<div class="pin-image-container relative bg-primary p-6 aspect-square flex flex-col items-center justify-center text-center text-white">
-<img alt="AI가 실제 업무를 바꾸는 제품을 만듭니다. 썸네일" class="absolute inset-0 w-full h-full object-cover" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22900%22%20height%3D%221100%22%20viewBox%3D%220%200%20900%201100%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23991b1b%22/%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23e60023%22/%3E%0A%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22s%22%3E%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2218%22%20stdDeviation%3D%2224%22%20flood-opacity%3D%22.18%22/%3E%3C/filter%3E%0A%20%20%20%20%3C/defs%3E%0A%20%20%20%20%3Crect%20width%3D%22900%22%20height%3D%221100%22%20rx%3D%2248%22%20fill%3D%22url%28%23g%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22760%22%20cy%3D%22150%22%20r%3D%22170%22%20fill%3D%22white%22%20opacity%3D%22.10%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22120%22%20cy%3D%22930%22%20r%3D%22230%22%20fill%3D%22white%22%20opacity%3D%22.08%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2270%22%20y%3D%2290%22%20width%3D%22760%22%20height%3D%22920%22%20rx%3D%2236%22%20fill%3D%22white%22%20opacity%3D%22.12%22%20filter%3D%22url%28%23s%29%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22225%22%20font-size%3D%22112%22%20font-family%3D%22Arial%2C%20sans-serif%22%3E%E2%9C%A6%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22620%22%20font-size%3D%2258%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20font-family%3D%22Arial%2C%20sans-serif%22%3EBuild%20Useful%20AI%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22690%22%20font-size%3D%2230%22%20fill%3D%22white%22%20opacity%3D%22.88%22%20font-family%3D%22Arial%2C%20sans-serif%22%3EProduct%20strategy%20and%20execution%3C/text%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22790%22%20width%3D%22220%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.75%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22825%22%20width%3D%22420%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22860%22%20width%3D%22330%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3C/svg%3E"/>
-<div class="absolute inset-0 bg-black/10"></div>
-<h4 class="font-headline-lg text-xl mb-4">AI가 실제 업무를 바꾸는 제품을 만듭니다.</h4>
-<a class="bg-white text-primary px-6 py-3 rounded-full font-bold text-sm hover:scale-105 transition-transform" href="mailto:hanul.kim@example.com">연락하기</a>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Certifications</h2>
+<div class="grid grid-cols-1 gap-4">
+<div class="border-l-4 border-primary bg-surface p-6 shadow-sm">
+<h4 class="font-body-lg font-bold text-primary">Pragmatic Institute Certified (PMC-VI)</h4>
+<p class="font-label-caps text-label-caps text-secondary mt-1">Foundations, Focus, Build, Launch, Price</p>
 </div>
-<h3 class="font-bold text-sm mt-2 px-1">협업</h3>
+<div class="border-l-4 border-primary bg-surface p-6 shadow-sm">
+<h4 class="font-body-lg font-bold text-primary">Project Management Professional (PMP)</h4>
+<p class="font-label-caps text-label-caps text-secondary mt-1">Project Management Institute</p>
+</div>
+<div class="border-l-4 border-primary bg-surface p-6 shadow-sm">
+<h4 class="font-body-lg font-bold text-primary">Reforge Growth Series</h4>
+<p class="font-label-caps text-label-caps text-secondary mt-1">Growth Systems &amp; Advanced Retention</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA/Contact Intersection -->
+<section class="py-section-gap bg-primary text-on-primary overflow-hidden relative" id="contact">
+<div class="max-w-container-max mx-auto px-gutter text-center relative z-10">
+<h2 class="font-headline-xl text-headline-xl mb-6">Let's build the future of B2B SaaS.</h2>
+<p class="font-body-lg text-body-lg opacity-80 mb-10 max-w-2xl mx-auto">
+                    Currently open to discussing Senior Product Management opportunities or strategic consultations for high-growth startups.
+                </p>
+<div class="flex justify-center">
+<a class="bg-on-primary text-primary px-10 py-5 font-headline-md hover:scale-105 transition-transform" href="mailto:alex.kim@example.com">
+                        Get In Touch
+                    </a>
+</div>
+</div>
+<!-- Decorative Subtle Pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="100" id="grid" patternunits="userSpaceOnUse" width="100">
+<path d="M 100 0 L 0 0 0 100" fill="none" stroke="white" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
 </div>
 </section>
 </main>
-<!-- Simple Footer -->
-<footer class="bg-white border-t border-outline-variant py-12">
-<div class="max-w-container-max mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="flex items-center gap-4">
-<div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-lg">push_pin</span>
+<!-- Footer -->
+<footer class="bg-surface-container py-section-gap w-full">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="font-headline-md text-headline-md text-primary">PM Portfolio</div>
+<p class="font-label-caps text-label-caps text-secondary mt-2">© 2024 Product Manager Portfolio. Built for Executive Clarity.</p>
 </div>
-<span class="font-bold text-secondary">© 2026 김한얼 PM Portfolio · Fictional Demo</span>
-</div>
-<div class="flex gap-8">
-<a class="text-sm font-bold text-secondary hover:text-on-surface" href="#">LinkedIn</a>
-<a class="text-sm font-bold text-secondary hover:text-on-surface" href="#">이력서</a>
-<a class="text-sm font-bold text-secondary hover:text-on-surface" href="#">이메일</a>
+<div class="flex space-x-12">
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-opacity focus:ring-2 focus:ring-primary" href="https://linkedin.com">LinkedIn</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-opacity focus:ring-2 focus:ring-primary" href="mailto:alex.kim@example.com">Email</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-opacity focus:ring-2 focus:ring-primary" href="#">Resume</a>
 </div>
 </div>
 </footer>
 <script>
-        // Pinterest-like behavior: simple click to "zoom" interaction
-        document.querySelectorAll('.pin-card').forEach(pin => {
-            pin.addEventListener('click', () => {
-                // In a real app, this would open a modal or expanded view
-                const title = pin.querySelector('h3'); console.log('선택한 카드: ' + (title ? title.innerText : '제목 없음'));
+        // Simple active nav observer
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('font-bold', 'border-b-2', 'border-primary', 'pb-1', 'text-primary');
+                link.classList.add('text-on-surface-variant');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.remove('text-on-surface-variant');
+                    link.classList.add('font-bold', 'border-b-2', 'border-primary', 'pb-1', 'text-primary');
+                }
+            });
+        });
+
+        // Hover lift effect for experience list items
+        document.querySelectorAll('.timeline-role-detail li').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.transform = 'translateX(8px)';
+                item.style.transition = 'transform 0.3s ease';
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'translateX(0)';
             });
         });
     </script>
-
-<script>
-document.querySelectorAll('.pin-image-container img').forEach((img) => {
-  img.addEventListener('error', () => {
-    img.src = "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22900%22%20height%3D%221100%22%20viewBox%3D%220%200%20900%201100%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23111827%22/%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%234b5563%22/%3E%0A%20%20%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22s%22%3E%3CfeDropShadow%20dx%3D%220%22%20dy%3D%2218%22%20stdDeviation%3D%2224%22%20flood-opacity%3D%22.18%22/%3E%3C/filter%3E%0A%20%20%20%20%3C/defs%3E%0A%20%20%20%20%3Crect%20width%3D%22900%22%20height%3D%221100%22%20rx%3D%2248%22%20fill%3D%22url%28%23g%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22760%22%20cy%3D%22150%22%20r%3D%22170%22%20fill%3D%22white%22%20opacity%3D%22.10%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22120%22%20cy%3D%22930%22%20r%3D%22230%22%20fill%3D%22white%22%20opacity%3D%22.08%22/%3E%0A%20%20%20%20%3Crect%20x%3D%2270%22%20y%3D%2290%22%20width%3D%22760%22%20height%3D%22920%22%20rx%3D%2236%22%20fill%3D%22white%22%20opacity%3D%22.12%22%20filter%3D%22url%28%23s%29%22/%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22225%22%20font-size%3D%22112%22%20font-family%3D%22Arial%2C%20sans-serif%22%3E%F0%9F%A7%A0%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22620%22%20font-size%3D%2258%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20font-family%3D%22Arial%2C%20sans-serif%22%3EAI%20Product%3C/text%3E%0A%20%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%22690%22%20font-size%3D%2230%22%20fill%3D%22white%22%20opacity%3D%22.88%22%20font-family%3D%22Arial%2C%20sans-serif%22%3EFictional%20Portfolio%20Thumbnail%3C/text%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22790%22%20width%3D%22220%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.75%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22825%22%20width%3D%22420%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22110%22%20y%3D%22860%22%20width%3D%22330%22%20height%3D%2212%22%20rx%3D%226%22%20fill%3D%22white%22%20opacity%3D%22.35%22/%3E%0A%20%20%20%20%3C/svg%3E";
-  }, { once: true });
-});
-</script>
-
 </body></html>
